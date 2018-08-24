@@ -91,7 +91,7 @@ WSGI_APPLICATION = 'blog_django.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'blog',
+        'NAME': 'writers_blog',
         'HOST': 'ec2-54-225-92-1.compute-1.amazonaws.com',
         'DATABASE': 'derdv0gd6rt616',
         'USER': 'ftnujrhwtpegea',
