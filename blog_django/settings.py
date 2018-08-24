@@ -91,14 +91,12 @@ WSGI_APPLICATION = 'blog_django.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'writers_blog',
-        'HOST': 'ec2-54-225-92-1.compute-1.amazonaws.com',
-        'DATABASE': 'derdv0gd6rt616',
-        'USER': 'ftnujrhwtpegea',
+        'NAME': 'd9bu5sel1jt9tu',
+        'HOST': 'ec2-107-22-169-45.compute-1.amazonaws.com',
+        'DATABASE': 'd9bu5sel1jt9tu',
+        'USER': 'olkroovnbmeykr',
         'PORT': '5432',
-        'PASSWORD': 'c6ebf55abd480e3bad6589a6de3ffcb2a653477c8259068372987f178374e0bf',
-        'URI': 'postgres://ftnujrhwtpegea:c6ebf55abd480e3bad6589a6de3ffcb2a653477c8259068372987f178374e0bf@ec2-54-225-92-1.compute-1.amazonaws.com:5432/derdv0gd6rt616',
-        'HEROKU CLI': 'heroku pg:psql postgresql-flexible-95291 --app writers-blog-django'
+        'PASSWORD': '96bf2751dfc46171bea1e1bee0a796c4cebc52bf9ae7a675490919d5afa4e1bc',
     }
 }
 
