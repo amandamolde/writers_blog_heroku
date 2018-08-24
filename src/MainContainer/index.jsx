@@ -54,7 +54,7 @@ class MainContainer extends Component {
   // ========================= Posts API Calls =========================
   getPosts = async () => {
 
-    const posts = await fetch('http://localhost:8000/api/posts/');
+    const posts = await fetch('https://writers-blog-django.herokuapp.com/api/posts/');
     const postsJson = await posts.json();
     return postsJson
 
@@ -63,7 +63,7 @@ class MainContainer extends Component {
     e.preventDefault();
     console.log('this is post')
     try {
-      const createdPost = await fetch('http://localhost:8000/api/posts/', {
+      const createdPost = await fetch('https://writers-blog-django.herokuapp.com/api/posts/', {
         method: 'POST',
         body: JSON.stringify(post),
         headers: {
@@ -85,7 +85,7 @@ class MainContainer extends Component {
     // console.log(id, ' this is id of the post in the delete route');
     e.preventDefault();
     try {
-      const deletePost = await fetch('http://localhost:8000/api/posts/' + id + '/', {
+      const deletePost = await fetch('https://writers-blog-django.herokuapp.com/api/posts/' + id + '/', {
         method: 'DELETE',
       });
 
@@ -113,7 +113,7 @@ class MainContainer extends Component {
     console.log(postId)
 
     try {
-      const editResponse = await fetch('http://localhost:8000/api/posts/' + postId + '/', {
+      const editResponse = await fetch('https://writers-blog-django.herokuapp.com/api/posts/' + postId + '/', {
         method: 'PUT',
         body: JSON.stringify(this.state.postToEdit),
         headers: {
@@ -156,7 +156,7 @@ class MainContainer extends Component {
   // ========================= Comments API Calls =========================
 
   getComments = async () => {
-    const comments = await fetch('http://localhost:8000/api/comments/');
+    const comments = await fetch('https://writers-blog-django.herokuapp.com/api/comments/');
     const commentsJson = await comments.json();
     // console.log(commentsJson, ' this is commentsJson');
     // console.log(comments, ' this is comments');
@@ -168,7 +168,7 @@ class MainContainer extends Component {
     e.preventDefault();
 
     try {
-      const createdComment = await fetch('http://localhost:8000/api/comments/', {
+      const createdComment = await fetch('https://writers-blog-django.herokuapp.com/api/comments/', {
         method: 'POST',
         body: JSON.stringify(comment),
         headers: {
@@ -186,7 +186,7 @@ class MainContainer extends Component {
     e.preventDefault();
     // console.log('deleteComment function is being called, this is the id: ', id);
     try {
-      const deleteComment = await fetch('http://localhost:8000/api/comments/' + id + '/', {
+      const deleteComment = await fetch('https://writers-blog-django.herokuapp.com/api/comments/' + id + '/', {
         method: 'DELETE'
       });
       // console.log(deleteComment, ' this is delete comment');
@@ -224,7 +224,7 @@ class MainContainer extends Component {
     console.log(data)
     // e.preventDefault();
     try {
-      const editComment = await fetch('http://localhost:8000/api/comments/' + commentId + '/', {
+      const editComment = await fetch('https://writers-blog-django.herokuapp.com/api/comments/' + commentId + '/', {
         method: 'PUT',
         body: JSON.stringify({
           ...this.state.commentToEdit,
